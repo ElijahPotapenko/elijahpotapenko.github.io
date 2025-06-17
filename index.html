@@ -2,19 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>eLocate — Cuberto‑Inspired</title>
+  <title>eLocate — Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/reset.css" />
-  <link rel="stylesheet" href="./styles/base.css" />
-  <link rel="stylesheet" href="./styles/layout.css" />
+  <!-- UIcons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/uicons-bold-rounded.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+    
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #141414;
+  background: #ffffff;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #141414;
+}
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+    
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6vw;
+  border-bottom: 1px solid #eee;
+}
+.nav a {
+  margin-left: 2.5rem;
+  font-size: 1rem;
+}
+.hero {
+  padding: 6rem 6vw;
+}
+.big-title {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+.hero-desc {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 480px;
+  margin-bottom: 3rem;
+}
+.btn {
+  display: inline-block;
+  border: 1px solid #141414;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #141414;
+  color: #fff;
+}
+.section {
+  padding: 6rem 6vw;
+}
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+.work-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.work-text p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.work-text a {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.work-image img {
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+.about-text {
+  font-size: 1.2rem;
+  max-width: 720px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+.contact-form button {
+  padding: 1rem;
+  border: none;
+  background: #141414;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.email-fallback {
+  margin-top: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+.email-fallback a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .big-title {
+    font-size: 4rem;
+  }
+  .work-item {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .big-title {
+    font-size: 3rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 1rem;
+  }
+  .nav a {
+    margin-left: 1rem;
+  }
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+.btn {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #141414;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+  color: #141414;
+  background: transparent;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #141414;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn.light {
+  background: #fff;
+  border-color: #fff;
+  color: #141414;
+}
+
+.btn.light::before {
+  background: #eee;
+}
+
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">elocate</div>
+    <div class="logo">
+      <i class="fi fi-br-bolt"></i> elocate
+    </div>
     <nav class="nav">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#work"><i class="fi fi-br-layers"></i> Work</a>
+      <a href="#about"><i class="fi fi-br-lightbulb-on"></i> About</a>
+      <a href="#contact"><i class="fi fi-br-envelope"></i> Contact</a>
     </nav>
   </header>
 
@@ -22,38 +236,21 @@
     <section id="hero" class="hero">
       <h1 class="big-title">Digital design <br /> studio shaping <br /> bold products.</h1>
       <p class="hero-desc">We solve problems through design and technology — delivering clarity and scale for global clients.</p>
-      <a href="#contact" class="btn">Start project ↗</a>
+      <a href="#contact" class="btn"><i class="fi fi-br-comment-alt"></i> Start project</a>
     </section>
 
     <section id="work" class="section">
       <h2 class="section-title">Selected work</h2>
-
       <div class="work-item">
         <div class="work-text">
           <h3>Dribbble concept</h3>
           <p>Landing page exploration focused on oversized typography, vivid gradients, and smooth scroll storytelling.</p>
-          <a href="https://dribbble.com/shots/25267671--design" target="_blank">View ↗</a>
+          <a href="https://dribbble.com/shots/25267671--design" target="_blank" class="btn"><i class="fi fi-br-link"></i> View</a>
         </div>
         <div class="work-image">
           <img src="./images/portfolio/placeholder1.jpg" alt="Project preview" />
         </div>
       </div>
-
-      <div class="work-item">
-        <div class="work-text">
-          <h3>Dashboard overhaul</h3>
-          <p>Information architecture and dense data‑viz in an intuitive, delightful interface.</p>
-        </div>
-        <div class="work-image">
-          <img src="./images/portfolio/placeholder2.jpg" alt="Project preview" />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <h2 class="section-title">About</h2>
-      <p class="about-text">eLocate is a collective of independent designers and strategists. We value curiosity, precision and honesty. Our fully remote workflow allows us to assemble the best minds for each project — anywhere on the planet.</p>
-      <a href="#contact" class="btn light">Join our team</a>
     </section>
 
     <section id="clients" class="section clients">
@@ -64,7 +261,12 @@
         <img src="./images/clients/client3.png" alt="Client 3" />
         <img src="./images/clients/client4.png" alt="Client 4" />
       </div>
-      <a href="#contact" class="btn">Become a client ↗</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">eLocate is a collective of independent designers and strategists. We value curiosity, precision and honesty.</p>
+      <a href="#contact" class="btn light"><i class="fi fi-br-rocket-lunch"></i> Join our team</a>
     </section>
 
     <section id="contact" class="section contact">
@@ -73,11 +275,19 @@
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="_replyto" placeholder="Email" required />
         <textarea name="message" placeholder="Tell us about your idea" required></textarea>
-        <button type="submit">Send ↗</button>
+        <button type="submit"><i class="fi fi-br-paper-plane"></i> Send</button>
       </form>
-      <p class="email-fallback">Or email us — <a href="mailto:elocate.studio@gmail.com">elocate.studio@gmail.com</a></p>
-      <a href="mailto:elocate.studio@gmail.com" class="btn light">Write us directly</a>
+      <p class="email-fallback">Or write us at <a href="mailto:elocate.studio@gmail.com">elocate.studio@gmail.com</a></p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://instagram.com" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+      <a href="mailto:elocate.studio@gmail.com"><i class="fi fi-br-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 eLocate Studio</p>
+  </footer>
 </body>
 </html>
