@@ -2,47 +2,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>eLocate — Minimal Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>eLocate — Cuberto‑Inspired</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo">elocate <span>studio</span></div>
-        <nav class="main-nav">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="logo">elocate</div>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero" id="top">
-            <h1>Crafting digital experiences</h1>
-            <p class="subtext">Remote design studio focused on clarity, minimalism & collaboration.</p>
-            <a href="#contact" class="cta-button">Get in touch</a>
-        </section>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <h1 class="big-title">Digital design <br> studio shaping <br> bold products.</h1>
+      <p class="hero-desc">We solve problems through design and technology — delivering clarity and scale for global clients.</p>
+      <a href="#contact" class="btn">Start project ↗</a>
+    </section>
 
-        <section class="work" id="work">
-            <h2>Selected Work</h2>
-            <p class="hint">Upload 1200×800 px JPG/PNG images into <code>images/portfolio/</code>.</p>
-            <div class="portfolio-grid">
-                <img src="images/portfolio/placeholder1.jpg" alt="Project placeholder">
-                <img src="images/portfolio/placeholder2.jpg" alt="Project placeholder">
-                <img src="images/portfolio/placeholder3.jpg" alt="Project placeholder">
-            </div>
-        </section>
+    <!-- WORK -->
+    <section id="work" class="section">
+      <h2 class="section-title">Selected work</h2>
 
-        <section class="about" id="about">
-            <h2>About</h2>
-            <p>We unite independent designers to build meaningful products. Minimal by default, scalable by design.</p>
-        </section>
+      <div class="work-item">
+        <div class="work-text">
+          <h3>Dribbble concept</h3>
+          <p>Landing page exploration focused on oversized typography, vivid gradients, and smooth scroll storytelling.</p>
+          <a href="https://dribbble.com/shots/25267671--design" target="_blank">View ↗</a>
+        </div>
+        <div class="work-image">
+          <img src="images/portfolio/placeholder1.jpg" alt="Project preview">
+        </div>
+      </div>
 
-        <section class="contact" id="contact">
-            <h2>Contact</h2>
-            <p>Drop us a line at <a href="mailto:elocate.studio@gmail.com">elocate.studio@gmail.com</a></p>
-        </section>
-    </main>
+      <div class="work-item">
+        <div class="work-text">
+          <h3>Dashboard overhaul</h3>
+          <p>Information architecture and dense data‑viz in an intuitive, delightful interface.</p>
+        </div>
+        <div class="work-image">
+          <img src="images/portfolio/placeholder2.jpg" alt="Project preview">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">eLocate is a collective of independent designers and strategists. We value curiosity, precision and honesty. Our fully remote workflow allows us to assemble the best minds for each project — anywhere on the planet.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Let's talk</h2>
+      <form action="https://formspree.io/f/xknkzqay" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <textarea name="message" placeholder="Tell us about your idea" required></textarea>
+        <button type="submit">Send ↗</button>
+      </form>
+      <p class="email-fallback">Or email us — <a href="mailto:elocate.studio@gmail.com">elocate.studio@gmail.com</a></p>
+    </section>
+  </main>
 </body>
 </html>
