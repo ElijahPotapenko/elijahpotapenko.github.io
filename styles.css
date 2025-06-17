@@ -165,3 +165,10 @@ a {
         align-items: flex-start;
     }
 }
+
+.project-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
