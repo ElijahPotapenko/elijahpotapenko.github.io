@@ -1,174 +1,26 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    font-family: 'Helvetica Neue', sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    background-attachment: fixed;
-    color: #fff;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 3rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(16px);
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.nav-links a {
-    margin-left: 2rem;
-    font-size: 1rem;
-}
-
-.hero {
-    text-align: center;
-    padding: 6rem 2rem 4rem;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #e0e0e0;
-}
-
-.cta-button {
-    padding: 0.8rem 1.6rem;
-    background: #fff;
-    color: #1f1c2c;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #e0e0e0;
-}
-
-.services, .portfolio {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.services h2, .portfolio h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.service-grid, .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
-}
-
-.service, .project {
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.about {
-    padding: 4rem 2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact {
-    padding: 4rem 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-card {
-    max-width: 500px;
-    padding: 2rem;
-    text-align: center;
-}
-
-.glass {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
-
-    .nav-links a {
-        margin: 0.5rem;
-    }
-}
-
-
-/* Дополнительная адаптивность */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 2.75rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .service, .project {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-    .nav-links a {
-        margin: 0.4rem;
-        font-size: 0.95rem;
-    }
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-.project-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    object-fit: cover;
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#ffffff;color:#171717;line-height:1.6}
+a{color:#171717;text-decoration:none}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem}
+.logo{font-weight:700;font-size:1.2rem}
+.logo span{font-weight:300;color:#888}
+.main-nav a{margin-left:2rem;font-size:0.95rem}
+.hero{padding:4rem 2rem;text-align:center;max-width:720px;margin:0 auto}
+.hero h1{font-size:3rem;margin-bottom:1rem;font-weight:700}
+.subtext{margin-bottom:2rem;color:#555}
+.cta-button{display:inline-block;border:1px solid #171717;padding:0.8rem 1.6rem;border-radius:8px;font-size:1rem;transition:background .3s}
+.cta-button:hover{background:#171717;color:#fff}
+section{margin-top:4rem;padding:0 2rem}
+section h2{font-size:2rem;margin-bottom:1.5rem;text-align:center}
+.hint{text-align:center;margin-bottom:1rem;font-size:0.9rem;color:#777}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.portfolio-grid img{width:100%;border:1px solid #dadada;border-radius:8px;object-fit:cover}
+.about,.contact{max-width:720px;margin:0 auto;text-align:center}
+.about p,.contact p{font-size:1rem;color:#444}
+@media(max-width:768px){
+ .hero h1{font-size:2.4rem}
+ .main-nav{margin-top:1rem}
+ .main-nav a{margin-left:1rem}
+ .site-header{flex-direction:column;align-items:flex-start}
 }
